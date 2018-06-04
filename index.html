@@ -6,39 +6,77 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
     <title></title>
 
   </head>
-  <style>
-    .mySlides {display:none}
-    .w3-left, .w3-right, .w3-badge {cursor:pointer}
-    .w3-badge {height:13px;width:13px;padding:0}
-  </style>
+
   <body>
 
-    <header>
-      <nav>
-        <ul>
-          <a href="#section-0">Home</a>
-          <a href="#section-1">About</a>
-          <a href="#section-2">Projects</a>
-          <a href="#section-3">Contact</a>
-      </ul>
-      </nav>
-    </header>
-
+    <nav>
+      <ul>
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Contact</a>
+    </ul>
+    </nav>
 
     <div class="container0">
       <div id="column0">
-        <section id="section-0">
+        <section id="Home">
             <div class="section-intro-content">
               <div class="intro-content">
-                <h1>Julie Edelsvard</h1>
+                <h1>
+                  <span>J</span>
+                  <span>u</span>
+                  <span>l</span>
+                  <span>i</span>
+                  <span>e</span>
+                  <br>
+                  <span>E</span>
+                  <span>d</span>
+                  <span>e</span>
+                  <span>l</span>
+                  <span>s</span>
+                  <span>v</span>
+                  <span>a</span>
+                  <span>r</span>
+                  <span>d</span>
+                </h1>
                 <h2>Web Developer.</h2>
+                <a href="#About" class="page-scroll">
+                  <i class="fa fa-caret-down" style="font-size:3em"></i>
+                </a>
+                <script>
+                  $(document).ready(function(){
+                    // Add smooth scrolling to all links
+                    $("a").on('click', function(event) {
+
+                      // Make sure this.hash has a value before overriding default behavior
+                      if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                          scrollTop: $(hash).offset().top
+                        }, 800, function(){
+
+                          // Add hash (#) to URL when done scrolling (default click behavior)
+                          window.location.hash = hash;
+                        });
+                      } // End if
+                    });
+                  });
+                  </script>
               </div>
-              <div class="social-media-links"></div>
             </div>
         </section>
       </div>
@@ -46,7 +84,7 @@
 
     <div class="container1">
       <div id="column1">
-        <section id="section-1">
+        <section id="About">
           <div class="section-intro-content">
             <div class="content">
               <div id="columnA">
@@ -78,54 +116,82 @@
 
     <div class="container2">
       <div id="column2">
-        <section id="section-2">
+        <section id="Projects">
           <div class="section-intro-content">
             <div class="intro-content">
                 <u>Projects.</u>
                 <br>
-                <div class="w3-content w3-display-container" style="max-width:300px">
-                  <img class="mySlides" src="https://thumb.ibb.co/jnnqhd/chickyrun.png" style="width:100%">
-                  <img class="mySlides" src="https://thumb.ibb.co/dk2Cvy/ecoapp.png" style="width:100%">
-                  <img class="mySlides" src="https://thumb.ibb.co/bBGGNd/travelmate.png" style="width:100%">
-                  <img class="mySlides" src="https://thumb.ibb.co/k0zNTJ/tictactoe.png" style="width:100%">
-                  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-                    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-                    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+                <br>
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                  <!-- Full-width images with number and caption text -->
+                  <div class="mySlides fade">
+                    <div class"container-slide">
+                      <!-- <div id="left-slide"> -->
+                        <div class="numbertext">1 / 4</div>
+                        <img src="https://thumb.ibb.co/jnnqhd/chickyrun.png" style="width:100%">
+                        <div class="text">Chicky Run</div>
+                      <!-- </div>
+                      <div id="right-slide">
+                        <h2>Hello</h2>
+                      </div> -->
+                    </div>
                   </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="https://thumb.ibb.co/fSsiLy/ecoapp.png" style="width:100%">
+                    <div class="text">Eco App</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="https://thumb.ibb.co/bBGGNd/travelmate.png" style="width:100%">
+                    <div class="text">TravelMate</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="https://thumb.ibb.co/k0zNTJ/tictactoe.png" style="width:100%">
+                    <div class="text">Tic Tac Toe</div>
+                  </div>
+
+                  <!-- Next and previous buttons -->
+                  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
                 </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                  <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+
                 <script>
-                  var slideIndex = 1;
-                  showDivs(slideIndex);
+                  var slideIndex = 0;
+                  showSlides();
 
-                  function plusDivs(n) {
-                    showDivs(slideIndex += n);
+                  function showSlides() {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("dot");
+                      for (i = 0; i < slides.length; i++) {
+                         slides[i].style.display = "none";
+                      }
+                      slideIndex++;
+                      if (slideIndex > slides.length) {slideIndex = 1}
+                      for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";
+                      dots[slideIndex-1].className += " active";
+                      setTimeout(showSlides, 4000); // Change image every 2 seconds
                   }
-
-                  function currentDiv(n) {
-                    showDivs(slideIndex = n);
-                  }
-
-                  function showDivs(n) {
-                    var i;
-                    var x = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("demo");
-                    if (n > x.length) {slideIndex = 1}
-                    if (n < 1) {slideIndex = x.length}
-                    for (i = 0; i < x.length; i++) {
-                       x[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                       dots[i].className = dots[i].className.replace(" w3-white", "");
-                    }
-                    x[slideIndex-1].style.display = "block";
-                    dots[slideIndex-1].className += " w3-white";
-                    }
                   </script>
-
             </div>
           </div>
         </section>
@@ -134,7 +200,7 @@
 
     <div class="container3">
       <div id="column3">
-        <section id="section-3">
+        <section id="Contact">
           <div class="section-intro-content">
             <div class="intro-content">
               <u>Contact.</u>
